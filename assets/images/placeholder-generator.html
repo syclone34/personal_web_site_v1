@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Placeholder Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .placeholder {
+            width: 800px;
+            height: 450px;
+            margin: 20px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: white;
+            text-align: center;
+            padding: 40px;
+            border-radius: 8px;
+        }
+        #project1 {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        #project2 {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        #project3 {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+        h3 {
+            margin: 0;
+            font-size: 32px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .icon {
+            font-size: 80px;
+            margin-bottom: 20px;
+        }
+        .instructions {
+            max-width: 800px;
+            margin: 40px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="instructions">
+        <h2>📸 Project Image Instructions</h2>
+        <p>To create images for your projects, you have two options:</p>
+        <ol>
+            <li><strong>Use these placeholders temporarily:</strong> Right-click each placeholder below and "Save Image As" to save as project1.jpg, project2.jpg, and project3.jpg</li>
+            <li><strong>Add real screenshots:</strong> Take screenshots of your actual projects and save them as project1.jpg, project2.jpg, and project3.jpg in the assets/images folder</li>
+        </ol>
+        <p><strong>Recommended image size:</strong> 800x450 pixels (16:9 ratio)</p>
+    </div>
+
+    <div class="placeholder" id="project1">
+        <div>
+            <div class="icon">🍽️</div>
+            <h3>Restaurant Reservation System</h3>
+        </div>
+    </div>
+
+    <div class="placeholder" id="project2">
+        <div>
+            <div class="icon">💪</div>
+            <h3>Fitness Tracker Dashboard</h3>
+        </div>
+    </div>
+
+    <div class="placeholder" id="project3">
+        <div>
+            <div class="icon">🏠</div>
+            <h3>Real Estate Marketplace</h3>
+        </div>
+    </div>
+
+    <script>
+        // You can right-click and save each placeholder as an image
+        console.log('Placeholder images ready for download');
+    </script>
+</body>
+</html>

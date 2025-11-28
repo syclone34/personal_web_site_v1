@@ -1,0 +1,20 @@
+<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#grad1)"/>
+  <!-- Fork and Knife Icon -->
+  <circle cx="370" cy="160" r="45" fill="white" opacity="0.2"/>
+  <rect x="360" y="130" width="8" height="70" fill="white"/>
+  <rect x="355" y="125" width="18" height="8" rx="2" fill="white"/>
+  <rect x="420" y="130" width="8" height="70" fill="white"/>
+  <line x1="415" y1="135" x2="415" y2="155" stroke="white" stroke-width="3"/>
+  <line x1="425" y1="135" x2="425" y2="155" stroke="white" stroke-width="3"/>
+  <line x1="433" y1="135" x2="433" y2="155" stroke="white" stroke-width="3"/>
+  <text x="400" y="260" font-family="Arial, sans-serif" font-size="42" font-weight="bold" fill="white" text-anchor="middle">Restaurant Reservation</text>
+  <text x="400" y="305" font-family="Arial, sans-serif" font-size="42" font-weight="bold" fill="white" text-anchor="middle">System</text>
+  <text x="400" y="360" font-family="Arial, sans-serif" font-size="22" fill="rgba(255,255,255,0.85)" text-anchor="middle">Full-Stack Booking Platform</text>
+</svg>
