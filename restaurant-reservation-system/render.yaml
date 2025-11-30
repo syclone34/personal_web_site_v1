@@ -1,0 +1,15 @@
+# Render configuration for automatic deployment
+# This file tells Render how to build and run your backend
+
+services:
+  - type: web
+    name: restaurant-reservation-backend
+    env: node
+    rootDir: server
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 5000

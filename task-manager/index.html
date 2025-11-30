@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple and intuitive task manager app with drag-and-drop functionality">
+    <title>Task Manager | Cole Fuller</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1><i class="fas fa-tasks"></i> Task Manager</h1>
+            <p class="subtitle">Stay organized and productive</p>
+        </header>
+
+        <!-- Task Input -->
+        <div class="task-input-section">
+            <div class="input-group">
+                <input type="text" id="taskInput" placeholder="What needs to be done?" autocomplete="off">
+                <select id="taskPriority">
+                    <option value="low">Low Priority</option>
+                    <option value="medium" selected>Medium Priority</option>
+                    <option value="high">High Priority</option>
+                </select>
+                <input type="date" id="taskDueDate">
+                <button id="addTaskBtn" class="btn-primary">
+                    <i class="fas fa-plus"></i> Add Task
+                </button>
+            </div>
+        </div>
+
+        <!-- Filter and Stats -->
+        <div class="controls">
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">All (<span id="count-all">0</span>)</button>
+                <button class="filter-btn" data-filter="active">Active (<span id="count-active">0</span>)</button>
+                <button class="filter-btn" data-filter="completed">Completed (<span id="count-completed">0</span>)</button>
+            </div>
+            <button id="clearCompleted" class="btn-secondary">
+                <i class="fas fa-trash"></i> Clear Completed
+            </button>
+        </div>
+
+        <!-- Task Lists by Priority -->
+        <div class="task-sections">
+            <!-- High Priority -->
+            <div class="priority-section" data-priority="high">
+                <div class="section-header high-priority">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <h2>High Priority</h2>
+                    <span class="task-count">0</span>
+                </div>
+                <div class="task-list" id="highPriorityList" data-priority="high"></div>
+            </div>
+
+            <!-- Medium Priority -->
+            <div class="priority-section" data-priority="medium">
+                <div class="section-header medium-priority">
+                    <i class="fas fa-minus-circle"></i>
+                    <h2>Medium Priority</h2>
+                    <span class="task-count">0</span>
+                </div>
+                <div class="task-list" id="mediumPriorityList" data-priority="medium"></div>
+            </div>
+
+            <!-- Low Priority -->
+            <div class="priority-section" data-priority="low">
+                <div class="section-header low-priority">
+                    <i class="fas fa-arrow-down-circle"></i>
+                    <h2>Low Priority</h2>
+                    <span class="task-count">0</span>
+                </div>
+                <div class="task-list" id="lowPriorityList" data-priority="low"></div>
+            </div>
+        </div>
+
+        <!-- Empty State -->
+        <div id="emptyState" class="empty-state">
+            <i class="fas fa-clipboard-check"></i>
+            <h3>No tasks yet</h3>
+            <p>Add a task above to get started</p>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Built by <a href="https://github.com/syclone34" target="_blank">Cole Fuller</a></p>
+            <p class="tip"><i class="fas fa-lightbulb"></i> Tip: Drag tasks between priority levels!</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

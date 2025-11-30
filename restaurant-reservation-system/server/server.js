@@ -9,8 +9,20 @@ const tableRoutes = require('./routes/tables');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+// CORS configuration for production and development
+const corsOptions = {
+  origin: process.env.NODE_ENV === 'production' 
+    ? [
+        'https://restaurant-reservation-system.vercel.app',
+        'https://restaurant-reservation-system-*.vercel.app', // Preview deployments
+      ]
+    : ['http://localhost:3000', 'http://localhost:3001'],
+  credentials: true,
+  optionsSuccessStatus: 200
+};
+
 // Middleware
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 

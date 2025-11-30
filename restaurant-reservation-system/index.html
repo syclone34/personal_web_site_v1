@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Reservation System | Cole Fuller</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            max-width: 800px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .icon {
+            font-size: 80px;
+            color: #667eea;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #1e293b;
+            margin-bottom: 20px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #64748b;
+            margin-bottom: 40px;
+        }
+
+        .tech-stack {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .tech-badge {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .section {
+            margin: 30px 0;
+            padding: 30px;
+            background: #f8fafc;
+            border-radius: 12px;
+            text-align: left;
+        }
+
+        .section h2 {
+            color: #1e293b;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section h2 i {
+            color: #667eea;
+        }
+
+        .features {
+            list-style: none;
+            padding: 0;
+        }
+
+        .features li {
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #475569;
+        }
+
+        .features li i {
+            color: #10b981;
+            font-size: 1.2rem;
+        }
+
+        .code-block {
+            background: #1e293b;
+            color: #e2e8f0;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            text-align: left;
+            margin: 15px 0;
+            overflow-x: auto;
+        }
+
+        .code-block .comment {
+            color: #94a3b8;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .btn-secondary {
+            background: #64748b;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #475569;
+            transform: translateY(-2px);
+        }
+
+        .note {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: left;
+        }
+
+        .note strong {
+            color: #92400e;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="icon">
+            <i class="fas fa-utensils"></i>
+        </div>
+        
+        <h1>Restaurant Reservation System</h1>
+        <p class="subtitle">A full-stack booking platform with React, Node.js, and SQLite</p>
+
+        <div class="tech-stack">
+            <span class="tech-badge"><i class="fab fa-react"></i> React</span>
+            <span class="tech-badge"><i class="fab fa-node"></i> Node.js</span>
+            <span class="tech-badge"><i class="fas fa-server"></i> Express</span>
+            <span class="tech-badge"><i class="fas fa-database"></i> SQLite</span>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-star"></i> Key Features</h2>
+            <ul class="features">
+                <li><i class="fas fa-check-circle"></i> Real-time table availability checking</li>
+                <li><i class="fas fa-check-circle"></i> Customer reservation management</li>
+                <li><i class="fas fa-check-circle"></i> Admin dashboard for restaurant staff</li>
+                <li><i class="fas fa-check-circle"></i> Automatic table assignment by party size</li>
+                <li><i class="fas fa-check-circle"></i> SQLite database with auto-initialization</li>
+            </ul>
+        </div>
+
+        <div class="note">
+            <strong><i class="fas fa-info-circle"></i> Note:</strong> This is a full-stack application that requires both frontend and backend servers to be running. It cannot be opened directly as a static HTML file.
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-terminal"></i> Quick Start</h2>
+            <p style="margin-bottom: 15px;">To run this application locally:</p>
+            
+            <div class="code-block">
+<span class="comment"># Terminal 1 - Start Backend Server</span>
+cd restaurant-reservation-system/server
+npm install
+npm start
+
+<span class="comment"># Terminal 2 - Start Frontend App</span>
+cd restaurant-reservation-system/client
+npm install
+npm start
+
+<span class="comment"># App opens at http://localhost:3000</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-rocket"></i> Deployment</h2>
+            <p>This application is ready to deploy to:</p>
+            <ul class="features">
+                <li><i class="fab fa-github"></i> <strong>Frontend:</strong> Vercel, Netlify, or GitHub Pages</li>
+                <li><i class="fas fa-server"></i> <strong>Backend:</strong> Render, Railway, or Heroku</li>
+            </ul>
+            <p style="margin-top: 15px; color: #64748b;">See <code>QUICK_START_DEPLOY.md</code> for detailed deployment instructions.</p>
+        </div>
+
+        <div class="buttons">
+            <a href="https://github.com/syclone34/restaurant-reservation-system" target="_blank" class="btn btn-primary">
+                <i class="fab fa-github"></i> View on GitHub
+            </a>
+            <a href="README.md" class="btn btn-secondary">
+                <i class="fas fa-book"></i> Read Documentation
+            </a>
+            <a href="../index.html" class="btn btn-secondary">
+                <i class="fas fa-arrow-left"></i> Back to Portfolio
+            </a>
+        </div>
+    </div>
+</body>
+</html>
